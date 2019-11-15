@@ -33,6 +33,7 @@ def backup():
     # open archive
     print('creating archive...')
     z = zipfile.ZipFile(name, 'w')
+    print('backup homedir...')
 # backup homedir
     for root, dirs, files in os.walk(homedir):
         for file in files:
@@ -42,11 +43,15 @@ def backup():
 # backup other stuff
     for file in f_source:
         z.write(file)
+    print('backup some stuff')
     z.close()
+
 
 # upload then delete archive
 def upload(archive):
+    print('uploading archive...')
     bash('gdrive upload '+archive)
+    print('delete local archive')
     bash('rm '+archive)
     print(OK_GREEN+'DONE!'+OK_GREEN)
 
@@ -61,8 +66,13 @@ def download():
 # exctract all from archive
 def extract(archive):
     z = zipfile.ZipFile(archive, 'r')
+    print('extract archive...')
     z.extractall('/')
     z.close()
+    print('delete local archive')
+    bash('rm '+archive)
+    
+
 
 # keys
 if sys.argv[1] == '-b':
