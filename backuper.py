@@ -4,6 +4,7 @@ import re
 import time
 import sys
 import zipfile
+from os.path import basename
 
 
 # bash
@@ -41,6 +42,9 @@ def backup():
                 files.remove(name)
             z.write(os.path.join(root, file))
 # backup other stuff
+    if conemu in f_source:
+        f_source.remove(conemu)
+        z.write(conemu, basename(conemu))
     for file in f_source:
         z.write(file)
     print('backup some stuff')
