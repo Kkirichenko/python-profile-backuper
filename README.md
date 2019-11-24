@@ -3,8 +3,6 @@ Simple python script for backup homedir and some config files to google drive
 
 ## Usage: 
 
-if need to add files - edit f_source list in script (user homedir backup as default)
-
 ```
 -b to backup 
 
