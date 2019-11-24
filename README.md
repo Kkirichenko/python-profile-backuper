@@ -1,5 +1,5 @@
 # python-profile-backuper
-Simple python script for backup homedir and some config files to google drive
+Simple python script for backup homedir
 
 ## Usage: 
 
