@@ -1,5 +1,5 @@
 # python-profile-backuper
-Simple python script for backup/resotre homedir into/from google drive 
+Simple python script for backup/restore homedir into/from google drive 
 
 ## Usage: 
 
