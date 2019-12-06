@@ -60,9 +60,7 @@ parser.add_argument('--restore', action='store_true', help='restore homedir from
 args = parser.parse_args()
 
 if args.backup:
-    print('BAK!')
-    #backup()
-    #upload(name)
+    backup()
+    upload(name)
 elif args.restore:
-    print('RESTORE!')
-    #extract(download())
+    extract(download())
