@@ -4,9 +4,11 @@ Simple python script for backup/restore homedir into/from google drive
 ## Usage: 
 
 ```
--b to backup 
+--backup to backup 
 
--r to restore
+--restore to restore
+
+-h to help
 ```
 ## Built With
 
