@@ -3,7 +3,6 @@
 import os
 import time
 import zipfile
-import sys
 import argparse
 
 
@@ -53,13 +52,15 @@ def extract(archive):
     print('delete downloaded archive')
     os.remove(archive)
 
-parser = argparse.ArgumentParser(description='Simple python script for backup/restore homedir into/from google drive')
+
+parser = argparse.ArgumentParser(
+    description='backup/restore homedir into/from google drive')
 parser.add_argument('--backup', help='backup homedir to gdrive')
 parser.add_argument('--restore', help='restore homedir from gdrive')
 args = parser.parse_args()
 
-if args.b:
+if args.backup:
     backup()
     upload(name)
-elif args.r:
+elif args.restore:
     extract(download())
