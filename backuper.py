@@ -55,12 +55,14 @@ def extract(archive):
 
 parser = argparse.ArgumentParser(
     description='backup/restore homedir into/from google drive')
-parser.add_argument('--backup', help='backup homedir to gdrive')
-parser.add_argument('--restore', help='restore homedir from gdrive')
+parser.add_argument('--backup', action='store_true', help='backup homedir to gdrive')
+parser.add_argument('--restore', action='store_true', help='restore homedir from gdrive')
 args = parser.parse_args()
 
 if args.backup:
-    backup()
-    upload(name)
+    print('BAK!')
+    #backup()
+    #upload(name)
 elif args.restore:
-    extract(download())
+    print('RESTORE!')
+    #extract(download())
